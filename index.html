@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Survey Form</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Survey Form</h1>
-        <form id="surveyForm">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" required>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" required>
+  <h1>Survey Form</h1>
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" required>
+  <form id="survey-form">
 
-            <label for="country">Country:</label>
-            <select id="country" required>
-                <option value="">Select Country</option>
-                <option value="INDIA">INDIA</option>
-                <option value="UAE">UAE</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-                <!-- Add more countries as needed -->
-            </select>
+    <label for="first-name">First Name:</label>
+    <input type="text" name="first-name" id="first-name" required>
 
-            <label for="gender">Gender:</label>
-            <label><input type="checkbox" name="gender" value="Male"> Male</label>
-            <label><input type="checkbox" name="gender" value="Female"> Female</label>
+    <label for="last-name">Last Name:</label>
+    <input type="text" name="last-name" id="last-name" required>
 
-            <label for="profession">Profession:</label>
-            <input type="text" id="profession" required>
+    <label for="date-of-birth">Date of Birth:</label>
+    <input type="date" name="date-of-birth" id="date-of-birth" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+    <label for="country">Country:</label>
+    <select name="country" id="country" required>
+      <option value="">Please select a country</option>
+      <option value="US">United States</option>
+      <option value="UK">United Kingdom</option>
+      <option value="India">India</option>
+      <option value="Canada">Canada</option>
+      <option value="Australia">Australia</option>
+    </select>
 
-            <label for="mobile">Mobile Number:</label>
-            <input type="tel" id="mobile" required>
+    <label for="gender" style="display: flex; align-items: center;">
+  Gender:
+  <input type="checkbox" name="gender" id="gender-male" value="male" required> Male
+  <input type="checkbox" name="gender" id="gender-female" value="female" required> Female
+</label>
 
-            <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
-            <button type="button" id="resetBtn" onclick="resetForm()">Reset</button>
-        </form>
-    </div>
-    <div id="popup" class="hidden">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Survey Form Submitted:</h2>
-            <div id="submittedData"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <label for="profession">Profession:</label>
+    <input type="text" name="profession" id="profession" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="mobile-number">Mobile Number:</label>
+    <input type="tel" name="mobile-number" id="mobile-number" required>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
 </body>
 </html>

@@ -1,66 +1,54 @@
+/* CSS styles for the form */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-.container {
-    background-color: #fff;
-    max-width: 400px;
+    font-family: sans-serif;
+  }
+  
+  form {
+    width: 500px;
     margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-form label {
+  }
+  
+  label {
     display: block;
     margin-top: 10px;
-}
-
-form select, form input[type="text"], form input[type="date"], form input[type="email"], form input[type="tel"] {
+    margin-bottom: 10px;
+  }
+  
+  input, select {
     width: 100%;
-    height: 30px;
-    margin-top: 5px;
-}
-
-form label[for="gender"] {
-    display: inline;
-    margin-top: 5px;
-}
-
-button {
-    display: block;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
     margin-top: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-.popup {
-    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Popup styles */
+  
+  .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  
+  .popup-content {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-}
-
-.close {
+  }
+  
+  .popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 20px;
     cursor: pointer;
-}
+  }
+  

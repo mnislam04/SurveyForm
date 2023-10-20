@@ -1,39 +1,16 @@
-function submitForm() {
-    const form = document.getElementById("surveyForm");
-    if (form.checkValidity()) {
-        const firstName = document.getElementById("firstName").value;
-        const lastName = document.getElementById("lastName").value;
-        const dob = document.getElementById("dob").value;
-        const country = document.getElementById("country").value;
-        const gender = [...document.querySelectorAll('input[name="gender"]:checked')].map(el => el.value).join(', ');
-        const profession = document.getElementById("profession").value;
-        const email = document.getElementById("email").value;
-        const mobile = document.getElementById("mobile").value;
-
-        const submittedData = `
-            First Name: ${firstName}
-            Last Name: ${lastName}
-            Date of Birth: ${dob}
-            Country: ${country}
-            Gender: ${gender}
-            Profession: ${profession}
-            Email: ${email}
-            Mobile Number: ${mobile}
-        `;
-
-        document.getElementById("submittedData").innerText = submittedData;
-        document.getElementById("popup").classList.remove("hidden");
-        form.reset();
-    } else {
-        alert("Please fill in all required fields.");
-    }
-}
-
-function resetForm() {
-    const form = document.getElementById("surveyForm");
-    form.reset();
-}
-
-function closePopup() {
-    document.getElementById("popup").classList.add("hidden");
-}
+// Validate the form
+function validateForm() {
+    var form = document.getElementById('survey-form');
+    var first_name = form.elements['first-name'].value;
+    var last_name = form.elements['last-name'].value;
+    var date_of_birth = form.elements['date-of-birth'].value;
+    var country = form.elements['country'].value;
+    var gender = form.elements['gender'].value;
+    var profession = form.elements['profession'].value;
+    var email = form.elements['email'].value;
+    var mobile_number = form.elements['mobile-number'].value;
+  
+    // Check if all fields are filled in
+    if (first_name === '' || last_name === '' || date_of_birth === '' || country === '' || gender === '' || profession === '' || email === '' || mobile_number === '') {
+      alert('Please fill in all required fields.');
+      return false;
